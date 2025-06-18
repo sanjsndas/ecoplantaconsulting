@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EcoPlanta Consulting - Contact Us</title>
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<!-- Modern typography (Inter) -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+  /* Reset & Basic */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #f4f9f4;
+    color: #000000;
+    line-height: 1.8;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+  a {
+    color: #2c7a2c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #1f4d1f;
+    outline: none;
+  }
+  main {
+    max-width: 1200px;
+    margin: 2rem auto 4rem;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+  }
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    color: #000000;
+  }
+  h1 {
+    font-size: 3.6rem;
+    margin-bottom: 0.7rem;
+  }
+  h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 2.2rem;
+    margin-bottom: 0.7rem;
+  }
+  p {
+    font-size: 1.125rem;
+    color: #000000;
+    margin-bottom: 1.25rem;
+    text-align: justify;
+  }
+  ul, ol {
+    margin-left: 20px;
+    margin-bottom: 1.25rem;
+    font-size: 1.125rem;
+    color: #000000;
+  }
+  section {
+    padding-bottom: 2rem;
+    border-radius: 16px;
+    background: #e5f0e5;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 0.05);
+    padding: 32px 40px;
+  }
+  /* Navigation */
+  header {
+    position: sticky;
+    top: 0;
+    background: #386b33;
+    padding: 16px 40px;
+    color: white;
+    z-index: 10;
+    box-shadow: 0 2px 12px rgb(0 0 0 / 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  header .logo {
+    font-weight: 900;
+    font-size: 2.4rem;
+    letter-spacing: 2.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  header .logo .material-icons {
+    font-size: 2.8rem;
+    color: #a8d5a8;
+  }
+  nav {
+    display: flex !important;
+    gap: 32px;
+  }
+  nav a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    padding: 8px 8px 8px 0;
+  }
+  nav a .material-icons {
+    font-size: 22px;
+    color: #9cd89c;
+    transition: color 0.3s ease;
+  }
+  nav a:hover .material-icons,
+  nav a:focus .material-icons {
+    color: #d2f0d2;
+  }
+  nav a:hover,
+  nav a:focus {
+    color: #d2f0d2;
+  }
+  /* Cards for content blocks */
+  .card {
+    background: #ffffffcc;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgb(0 0 0 / 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  .card:hover {
+    box-shadow: 0 16px 28px rgb(0 0 0 / 0.15);
+  }
+  /* Form styling */
+  form {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  label {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #000000;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: 1px solid #99cc99;
+    font-size: 1.125rem;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 80px;
+    transition: border-color 0.3s ease;
+    color: #000000;
+    background-color: #ffffff;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #228822;
+    background: #f0fff0;
+  }
+  button[type="submit"] {
+    background: #3e793e;
+    color: white;
+    padding: 16px 28px;
+    border: none;
+    border-radius: 14px;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease;
+    max-width: 200px;
+  }
+  button[type="submit"]:hover,
+  button[type="submit"]:focus {
+    background: #2a582a;
+  }
+  /* Footer */
+  footer {
+    background: #2e5b2e;
+    color: #c6e2c6;
+    padding: 3rem 3rem 4rem;
+    font-size: 1rem;
+    letter-spacing: 0.6px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 36px;
+    text-align: center;
+  }
+  footer .footer-section {
+    max-width: 360px;
+  }
+  footer a {
+    color: #b6d7b6;
+    font-weight: 600;
+  }
+  .address {
+    font-style: normal;
+    margin-top: 1rem;
+  }
+  /* Customer satisfaction banner */
+  .customer-satisfaction {
+    background: #4a7f4a;
+    color: #b9e5b9;
+    padding: 1.75rem 2.5rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 14px;
+    margin: 3.5rem auto 4.5rem;
+    max-width: 980px;
+    box-shadow: 0 6px 18px rgb(0 0 0 / 0.3);
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      gap: 16px;
+      padding: 12px 20px;
+    }
+    nav {
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    main {
+      margin: 1rem auto 3rem;
+      padding: 0 20px;
+      gap: 56px;
+    }
+    footer {
+      font-size: 0.9rem;
+    }
+  }
+  /* Scrollbar for textarea */
+  textarea::-webkit-scrollbar {
+    width: 12px;
+  }
+  textarea::-webkit-scrollbar-track {
+    background: #e0f2e0;
+    border-radius: 10px;
+  }
+  textarea::-webkit-scrollbar-thumb {
+    background: #7bbc7b;
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo" aria-label="EcoPlanta logo: leaf icon and text">
+    <span class="material-icons" aria-hidden="true" style="color:#a8d5a8;">eco</span>
+    EcoPlanta Consulting
+  </div>
+  <nav role="navigation" aria-label="Primary navigation">
+   <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0"aria-current="page">Contact us</a>
+  </nav>
+</header>
+
+<main>
+
+<section id="hero" aria-label="Page header with title">
+  <h1>Contact EcoPlanta Consulting</h1>
+  <p id="slogan-text">We’d love to hear from you! Whether you have questions about our eco landscaping services, want to discuss a project, or seek expert advice on sustainable gardening, our team is here to assist you.</p>
+  <p>Please use the contact form below, or find our phone and mailing address in the footer for direct communication.</p>
+  <p>Your inquiries help us improve and grow our community committed to regenerative design and environmental stewardship.</p>
+</section>
+
+<section aria-label="Contact Information">
+  <h2>Contact Details</h2>
+  <p>You can reach EcoPlanta Consulting through any of the following methods:</p>
+  <ul>
+    <li><strong>Address:</strong> 240 Mercer St, New York, NY 10012, USA</li>
+    <li><strong>Phone:</strong> +1 (833) 211-9000 (Mon-Fri, 9AM-6PM EST)</li>
+    <li><strong>Email:</strong> <a href="mailto:contact@ecoplanta.com">contact@ecoplanta.com</a></li>
+    <li><strong>Fax:</strong> +1 (555) 765-4321</li>
+    <li><strong>Social Media: </strong>Follow us on Facebook, Twitter, and Instagram for updates and gardening tips.</li>
+  </ul>
+</section>
+
+<section aria-label="Contact Form">
+  <h2>Send Us a Message</h2>
+  <form id="contact-form" novalidate aria-describedby="contact-response">
+    <label for="name">Name <span aria-hidden="true">*</span></label>
+    <input type="text" id="name" name="name" required autocomplete="name" aria-required="true" />
+    <label for="email">Email <span aria-hidden="true">*</span></label>
+    <input type="email" id="email" name="email" required autocomplete="email" aria-required="true" />
+    <label for="phone">Phone Number</label>
+    <input type="text" id="phone" name="phone" autocomplete="tel" placeholder="Optional" />
+    <label for="subject">Subject <span aria-hidden="true">*</span></label>
+    <input type="text" id="subject" name="subject" required aria-required="true" />
+    <label for="message">Message <span aria-hidden="true">*</span></label>
+    <textarea id="message" name="message" rows="7" required aria-required="true"></textarea>
+    <button type="submit">Submit</button>
+    <div id="contact-response" role="alert" style="padding-top:10px; font-weight:700; color:#275227;"></div>
+  </form>
+</section>
+
+<section aria-label="Additional Contact Information">
+  <h2>Visiting Us</h2>
+  <p>Our office is located in downtown New York City, easily accessible by public transport:</p>
+  <ul>
+    <li>Near the Houston Street subway station (6 train)</li>
+    <li>Multiple bus lines on Mercer St</li>
+    <li>Parking garages within walking distance</li>
+  </ul>
+  <p>To schedule an in-person consultation, please contact us anytime via phone or email.</p>
+</section>
+
+<section aria-label="Business Hours">
+  <h2>Business Hours</h2>
+  <p>Our office is open to clients weekdays from 9:00 AM to 6:00 PM Eastern Standard Time (EST), excluding public holidays.</p>
+  <p>We recommend booking appointments ahead of time to ensure availability and personalized attention.</p>
+</section>
+
+<section aria-label="Frequently Asked Questions">
+  <h2>Frequently Asked Questions</h2>
+
+  <h3>How soon can I get a consultation?</h3>
+  <p>Consultations are typically scheduled within one to two weeks of initial contact, depending on availability.</p>
+
+  <h3>Do you offer services outside New York?</h3>
+  <p>Yes, we provide consulting services regionally and can offer remote consultations for clients beyond our immediate area.</p>
+
+  <h3>What payment methods do you accept?</h3>
+  <p>We accept credit cards, bank transfers, and checks for services rendered. Payment terms are outlined in each service agreement.</p>
+
+  <h3>Can you handle large commercial landscaping projects?</h3>
+  <p>Absolutely. We have experience with residential, commercial, and community projects, tailoring strategies to project size and complexity.</p>
+
+  <h3>Do you provide maintenance services?</h3>
+  <p>We offer ongoing consulting and maintenance planning to ensure your garden remains sustainable and healthy long-term.</p>
+</section>
+
+<section aria-label="Feedback and Customer Support">
+  <h2>Customer Support and Feedback</h2>
+  <p>EcoPlanta Consulting values your satisfaction and open communication. Please feel free to share feedback or report any issues with our services or website.</p>
+  <p>We strive to respond promptly and resolve queries efficiently to maintain a high level of customer service.</p>
+</section>
+
+<section aria-label="Community Engagement">
+  <h2>Community Engagement and Events</h2>
+  <p>We actively participate in community education programs, workshops, and local events to promote sustainable gardening practices.</p>
+  <p>Stay tuned for announcements and opportunities to collaborate or learn with us.</p>
+</section>
+
+<section aria-label="Sustainability Commitment">
+  <h2>Our Commitment to Sustainability</h2>
+  <p>EcoPlanta Consulting is deeply committed to environmental stewardship and sustainable practices in every aspect of our operations. We endeavor to minimize our ecological footprint while enhancing the ecosystems where we work.</p>
+  <p>Our team continually educates themselves on emerging sustainable technologies and integrates these innovations into our consulting services for the benefit of clients and the planet.</p>
+</section>
+
+<section aria-label="Client Responsibilities">
+  <h2>Client Responsibilities</h2>
+  <p>We encourage our clients to actively participate in maintaining sustainable practices by following the guidelines and maintenance plans we provide. This partnership approach ensures lasting success and positive environmental impact.</p>
+  <p>Clients are recommended to use organic fertilizers, conserve water, and encourage biodiversity according to the customized recommendations.</p>
+</section>
+
+<section aria-label="Legal Disclaimer">
+  <h2>Legal Disclaimer</h2>
+  <p>While EcoPlanta Consulting strives to deliver the highest quality advice and services, we are not liable for circumstances beyond our control, including environmental changes, natural disasters, or unauthorized alterations to our recommendations.</p>
+  <p>Use of our services constitutes acceptance of these terms and your acknowledgement of inherent environmental uncertainties.</p>
+</section>
+
+<section aria-label="Privacy Assurance">
+  <h2>Privacy Assurance</h2>
+  <p>We respect your privacy and handle all personal information in accordance with our <a href="privacy.html">Privacy Policy</a>. Our contact channels are secure and confidential.</p>
+</section>
+
+<section aria-label="Accessibility">
+  <h2>Website Accessibility</h2>
+  <p>EcoPlanta Consulting is committed to ensuring our website is accessible to users with disabilities. We continuously work to improve accessibility in accordance with best practices and standards.</p>
+  <p>If you experience any difficulties using our site, please contact us for assistance.</p>
+</section>
+
+<section aria-label="Communication Preferences">
+  <h2>Communication Preferences</h2>
+  <p>You may receive communications from us such as newsletters, service updates, or promotions. You can opt out anytime using the unsubscribe links in emails or by contacting us directly.</p>
+</section>
+
+<section aria-label="Newsletter Subscription">
+  <h2>Newsletter Subscription</h2>
+  <p>Subscribe to our newsletter to receive the latest tips, project updates, and eco-friendly gardening insights.</p>
+  <form id="newsletter-form" novalidate aria-describedby="newsletter-response" style="max-width: 400px;">
+    <label for="newsletter-email">Email Address</label>
+    <input type="email" id="newsletter-email" name="newsletter-email" required aria-required="true" placeholder="you@example.com" />
+    <button type="submit">Subscribe</button>
+    <div id="newsletter-response" role="alert" style="padding-top:10px; font-weight:700; color:#275227;"></div>
+  </form>
+</section>
+
+<section aria-label="Environmental Impact">
+  <h2>Our Environmental Impact</h2>
+  <p>We measure and report on our environmental impact regularly, striving to improve our carbon footprint and promote regenerative practices.</p>
+  <p>Through collaborations and certifications, we ensure our operations align with global sustainability goals and client expectations.</p>
+</section>
+
+<section aria-label="Corporate Social Responsibility">
+  <h2>Corporate Social Responsibility (CSR)</h2>
+  <p>EcoPlanta Consulting actively supports community projects, education initiatives, and partnerships to foster environmental awareness and social responsibility.</p>
+  <p>We encourage clients and partners to join us in contributing positively to society and the planet.</p>
+</section>
+
+<section aria-label="Client Testimonials">
+  <h2>Client Testimonials</h2>
+  <p>“EcoPlanta transformed my backyard into a thriving ecosystem. Their expertise and passion for sustainability are unparalleled.” – Martha G.</p>
+  <p>“The permaculture plan they provided helped us reduce water use and grow healthier plants. Highly recommended!” – Daniel S.</p>
+  <p>“Professional, knowledgeable, and truly dedicated to ecological restoration.” – Karen P.</p>
+</section>
+
+<section aria-label="Additional Resources">
+  <h2>Additional Resources</h2>
+  <p>To learn more about sustainable gardening and permaculture, explore our blog, download guides, or attend one of our workshops.</p>
+  <p>We provide extensive resources to empower you on your regenerative gardening journey.</p>
+</section>
+
+<section aria-label="Extended Contact Content">
+  <h2>Extended Information and Resources</h2>
+  <p style="font-style: italic; color: #555;">
+  [This section contains extended content including detailed descriptions of contact processes, project inquiry protocols, client onboarding, consultation preparation, aftercare services, environmental compliance support, partnership guidelines and more. Content can be expanded with specific guidelines and legal information as needed.]
+  </p>
+</section>
+
+</main>
+
+<section class="customer-satisfaction" aria-live="polite" aria-atomic="true" tabindex="0" style="max-width:1200px; margin: 3rem auto;">
+  Increase your satisfaction and trust by partnering with EcoPlanta Consulting – committed to your privacy, quality, and sustainability.
+</section>
+
+<footer aria-label="Site footer">
+  <div class="footer-section" style="max-width:1200px; margin: 0 auto; padding: 2rem 3rem; color: #c6e2c6; background:#2e5b2e; text-align: center; border-radius:12px;">
+    <p>Contact Us: 240 Mercer St, New York, NY 10012, USA | Phone: +1 (833) 211-9000</p>
+    <p>&copy; 2024 EcoPlanta Consulting. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Contact form handling
+  const contactForm = document.getElementById('contact-form');
+  const contactResponse = document.getElementById('contact-response');
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = contactForm.name.value.trim();
+    const email = contactForm.email.value.trim();
+    const subject = contactForm.subject.value.trim();
+    const message = contactForm.message.value.trim();
+    if (!name || !email || !subject || !message) {
+      contactResponse.textContent = 'Please fill in all required fields.';
+      contactResponse.style.color = '#d22';
+      return;
+    }
+    contactResponse.textContent = 'Thank you for contacting us, ' + name + '! We will respond shortly.';
+    contactResponse.style.color = '#275227';
+    contactForm.reset();
+  });
+
+  // Newsletter subscription handling
+  const newsletterForm = document.getElementById('newsletter-form');
+  const newsletterResponse = document.getElementById('newsletter-response');
+  newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = newsletterForm['newsletter-email'].value.trim();
+    if (!email) {
+      newsletterResponse.textContent = 'Please enter a valid email address.';
+      newsletterResponse.style.color = '#d22';
+      return;
+    }
+    newsletterResponse.textContent = 'Thank you for subscribing to our newsletter!';
+    newsletterResponse.style.color = '#275227';
+    newsletterForm.reset();
+  });
+</script>
+
+</body>
+</html>
+

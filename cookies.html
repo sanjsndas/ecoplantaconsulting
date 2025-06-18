@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EcoPlanta Consulting - Cookies Policy</title>
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<!-- Modern typography (Inter) -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+  /* Reset & Basic */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #f4f9f4;
+    color: #000000;
+    line-height: 1.8;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    position: relative;
+    padding-bottom: 100px; /* for cookie consent box */
+  }
+  a {
+    color: #2c7a2c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #1f4d1f;
+    outline: none;
+  }
+  main {
+    max-width: 1200px;
+    margin: 2rem auto 4rem;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    color: #000000;
+  }
+  h1 {
+    font-size: 3.6rem;
+    margin-bottom: 0.7rem;
+  }
+  h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 2.2rem;
+    margin-bottom: 0.7rem;
+  }
+  p {
+    font-size: 1.125rem;
+    color: #000000;
+    margin-bottom: 1.25rem;
+    text-align: justify;
+  }
+  ul, ol {
+    margin-left: 20px;
+    margin-bottom: 1.25rem;
+    font-size: 1.125rem;
+    color: #000000;
+  }
+  section {
+    padding-bottom: 2rem;
+    border-radius: 16px;
+    background: #e5f0e5;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 0.05);
+    padding: 32px 40px;
+  }
+  /* Navigation */
+  header {
+    position: sticky;
+    top: 0;
+    background: #386b33;
+    padding: 16px 40px;
+    color: white;
+    z-index: 10;
+    box-shadow: 0 2px 12px rgb(0 0 0 / 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  header .logo {
+    font-weight: 900;
+    font-size: 2.4rem;
+    letter-spacing: 2.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  header .logo .material-icons {
+    font-size: 2.8rem;
+    color: #a8d5a8;
+  }
+  nav {
+    display: flex !important;
+    gap: 32px;
+  }
+  nav a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    padding: 8px 8px 8px 0;
+  }
+  nav a .material-icons {
+    font-size: 22px;
+    color: #9cd89c;
+    transition: color 0.3s ease;
+  }
+  nav a:hover .material-icons,
+  nav a:focus .material-icons {
+    color: #d2f0d2;
+  }
+  nav a:hover,
+  nav a:focus {
+    color: #d2f0d2;
+  }
+  /* Cards for content blocks */
+  .card {
+    background: #ffffffcc;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgb(0 0 0 / 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  .card:hover {
+    box-shadow: 0 16px 28px rgb(0 0 0 / 0.15);
+  }
+  /* Lists for tips */
+  ul.tips-list {
+    list-style: inside disc;
+    color: #000000;
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+  /* Footer */
+  footer {
+    background: #2e5b2e;
+    color: #c6e2c6;
+    padding: 3rem 3rem 4rem;
+    font-size: 1rem;
+    letter-spacing: 0.6px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 36px;
+    text-align: center;
+  }
+  footer .footer-section {
+    max-width: 360px;
+  }
+  footer a {
+    color: #b6d7b6;
+    font-weight: 600;
+  }
+  .address {
+    font-style: normal;
+    margin-top: 1rem;
+  }
+  /* Customer satisfaction banner */
+  .customer-satisfaction {
+    background: #4a7f4a;
+    color: #b9e5b9;
+    padding: 1.75rem 2.5rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 14px;
+    margin: 3.5rem auto 4.5rem;
+    max-width: 980px;
+    box-shadow: 0 6px 18px rgb(0 0 0 / 0.3);
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      gap: 16px;
+      padding: 12px 20px;
+    }
+    nav {
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    main {
+      margin: 1rem auto 3rem;
+      padding: 0 20px;
+      gap: 56px;
+    }
+    footer {
+      font-size: 0.9rem;
+    }
+  }
+  /* Scrollbar for textarea */
+  textarea::-webkit-scrollbar {
+    width: 12px;
+  }
+  textarea::-webkit-scrollbar-track {
+    background: #e0f2e0;
+    border-radius: 10px;
+  }
+  textarea::-webkit-scrollbar-thumb {
+    background: #7bbc7b;
+    border-radius: 10px;
+  }
+  /* Cookie consent dialog */
+  #cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #2e5b2e;
+    color: #c6e2c6;
+    padding: 16px 24px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    z-index: 99999;
+    flex-wrap: wrap;
+  }
+  #cookie-message {
+    flex: 1 1 auto;
+    min-width: 220px;
+  }
+  #cookie-buttons {
+    display: flex;
+    gap: 12px;
+  }
+  #cookie-buttons button {
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    min-width: 120px;
+    transition: background-color 0.3s ease;
+  }
+  #btn-accept {
+    background-color: #4a7f4a;
+    color: #b9e5b9;
+  }
+  #btn-accept:hover, #btn-accept:focus {
+    background-color: #3c6f3c;
+    outline: none;
+  }
+  #btn-decline {
+    background-color: #753232;
+    color: #f4cccc;
+  }
+  #btn-decline:hover, #btn-decline:focus {
+    background-color: #602525;
+    outline: none;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo" aria-label="EcoPlanta logo: leaf icon and text">
+    <span class="material-icons" aria-hidden="true" style="color:#a8d5a8;">eco</span>
+    EcoPlanta Consulting
+  </div>
+  <nav role="navigation" aria-label="Primary navigation">
+    <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+  </nav>
+</header>
+
+<main>
+<section id="hero" aria-label="Page header with title">
+  <h1>Cookies Policy</h1>
+  <p>This Cookies Policy explains how EcoPlanta Consulting ("we", "us", and "our") uses cookies and similar technologies to recognize you when you visit our website. It explains what these technologies are, why we use them, and your rights to control our use of them.</p>
+  <p>By continuing to browse or use our website, you consent to the use of cookies as described in this policy.</p>
+</section>
+
+<section aria-label="What Are Cookies?">
+  <h2>What Are Cookies?</h2>
+  <p>Cookies are small text files stored on your device (computer, smartphone, or other device) by a website’s server through your web browser. They help the website remember your actions and preferences (such as login, language, font size) over a period to enhance your browsing experience.</p>
+  <p>Cookies can be "session cookies" which are deleted when you close your browser, or "persistent cookies" which remain on your device until they expire or are deleted.</p>
+</section>
+
+<section aria-label="Types of Cookies We Use">
+  <h2>Types of Cookies We Use</h2>
+  <p>We use cookies for several purposes, including:</p>
+
+  <ol>
+    <li><strong>Strictly Necessary Cookies:</strong> These help the website function properly, enabling core features like security, network management, and accessibility. They cannot be disabled as they are essential.</li>
+    <li><strong>Performance Cookies:</strong> Collect information on how visitors use our site, such as pages visited and any errors encountered. This data improves site performance and usability.</li>
+    <li><strong>Functionality Cookies:</strong> Allow the site to remember choices you make, like language or region, to provide enhanced features and personalized content.</li>
+    <li><strong>Targeting or Advertising Cookies:</strong> Used to deliver relevant advertisements to you, based on your interests, and to measure the effectiveness of ad campaigns.</li>
+    <li><strong>Analytics Cookies:</strong> Help us monitor site traffic and usage to better understand trends and user behavior to improve the website experience.</li>
+  </ol>
+</section>
+
+<section aria-label="Managing Cookies">
+  <h2>Managing Cookies</h2>
+  <p>You can manage your cookie preferences through your browser settings. You have the option to block, delete, or accept cookies on your device. However, please note that disabling certain cookies may affect your experience and some features on our site may not function correctly.</p>
+</section>
+
+<section aria-label="Consent to Use Cookies">
+  <h2>Consent to Use Cookies</h2>
+  <p>When you first visit our website, a cookie consent dialog will appear allowing you to accept or decline cookies. Your choice will be stored, and we will respect your preferences for your subsequent visits.</p>
+  <p>You can also change your preferences at any time by adjusting your browser settings or through the consent dialog if available.</p>
+</section>
+
+<section aria-label="Detailed Contacts and Communications Points">
+
+  <h2>Detailed Contact-Related Information</h2>
+
+  <!-- 40 detailed topics each with about 10 lines -->
+
+  <article>
+    <h3>1. Contact Information Collection</h3>
+    <p>We collect contact details such as your name, email, phone number, and mailing address to communicate with you effectively. This information is gathered through forms, email correspondence, phone calls, and during service provision, ensuring we can serve your requests efficiently.</p>
+    <p>We only collect information that is necessary to fulfill your communication needs or to respond to inquiries, ensuring minimal risk and respecting your privacy at all times.</p>
+  </article>
+
+  <article>
+    <h3>2. Use of Contact Information</h3>
+    <p>Your contact information enables us to provide services, respond to requests, and keep you updated about our offerings. We use your information explicitly and do not share it externally without your consent.</p>
+    <p>We carefully manage these details in accordance with our privacy standards to maintain trust and confidentiality.</p>
+  </article>
+
+  <article>
+    <h3>3. Communication Channels</h3>
+    <p>Our communication channels include email, telephone, postal mail, and online forms. We are committed to ensuring these channels are secure, responsive, and usable, maintaining high standards of service for all clients.</p>
+    <p>All messages are treated with confidentiality and handled by authorized personnel only.</p>
+  </article>
+
+  <article>
+    <h3>4. Data Security Measures</h3>
+    <p>We implement industry-standard technical safeguards including encryption, access control, and network security to protect your contact information against unauthorized access, alteration, or loss.</p>
+    <p>Our data storage systems are continuously monitored and updated to address emerging threats and maintain data integrity.</p>
+  </article>
+
+  <article>
+    <h3>5. Third-Party Providers</h3>
+    <p>Only trusted third-party providers who are contractually obliged to maintain confidentiality and data protection assist us in managing our communication systems.</p>
+    <p>We do not allow any third party to use your data for their purposes unless explicitly authorized by you.</p>
+  </article>
+
+  <article>
+    <h3>6. User Rights to Data</h3>
+    <p>You have the right to access, correct, or delete your personal contact data at any time. Should you wish to exercise such rights, please contact our privacy team, and we will respond promptly to fulfill your requests.</p>
+  </article>
+
+  <article>
+    <h3>7. Retention of Contact Data</h3>
+    <p>We retain your contact information only for as long as necessary to provide our services and comply with legal obligations.</p>
+    <p>Once it is no longer required, your data is securely deleted or anonymized to protect your privacy.</p>
+  </article>
+
+  <article>
+    <h3>8. Email Communications & Marketing</h3>
+    <p>We use your email address to send service-related correspondence and, subject to your consent, promotional offers and newsletters.</p>
+    <p>You can opt out of marketing communications at any time using the unsubscribe links in our emails.</p>
+  </article>
+
+  <article>
+    <h3>9. Telephone Communications</h3>
+    <p>When you contact us by phone or leave your number, we may call you to answer questions or provide support regarding our services.</p>
+    <p>Calls may be recorded to improve service quality and for training purposes, with your privacy respected at all times.</p>
+  </article>
+
+  <article>
+    <h3>10. Online Form Security</h3>
+    <p>Our online contact forms are secured with SSL encryption to protect your data during transmission.</p>
+    <p>Do not submit sensitive personal information through unsecured channels.</p>
+  </article>
+
+  <article>
+    <h3>11. Data Accuracy</h3>
+    <p>We encourage you to provide accurate and complete contact information to ensure we can properly fulfill your requests.</p>
+    <p>Inaccurate data may delay our response or cause service issues.</p>
+  </article>
+
+  <article>
+    <h3>12. Social Media Contact</h3>
+    <p>You can also reach out to us via our social media channels. Please note that communications on public platforms are not private.</p>
+    <p>We recommend using our official contact details for sensitive or personal inquiries.</p>
+  </article>
+
+  <article>
+    <h3>13. Automated Responses</h3>
+    <p>For some inquiries, we use automated emails to acknowledge receipt and provide informational resources to assist you quickly.</p>
+    <p>These responses do not replace personalized human support when required.</p>
+  </article>
+
+  <article>
+    <h3>14. Contact Preferences</h3>
+    <p>You may specify your preferred methods and times of contact with us to ensure communications are convenient and effective.</p>
+  </article>
+
+  <article>
+    <h3>15. Respecting Do Not Call Requests</h3>
+    <p>If you request not to receive phone calls, we will honor your preference in compliance with relevant telemarketing laws.</p>
+  </article>
+
+  <article>
+    <h3>16. Mailing List Participation</h3>
+    <p>Participation in our mailing lists is voluntary, and you can unsubscribe at any time without consequence to service provision.</p>
+  </article>
+
+  <article>
+    <h3>17. Cross-Border Data Transfers</h3>
+    <p>Your contact data may be processed or stored in countries outside your own, in compliance with international data protection standards.</p>
+  </article>
+
+  <article>
+    <h3>18. Partnership Communications</h3>
+    <p>We may communicate your contact details with our business partners for cooperative service delivery, with your consent or as required by law.</p>
+  </article>
+
+  <article>
+    <h3>19. Data Breach Notification</h3>
+    <p>In the unlikely event of a data breach affecting your contact information, we will notify you promptly and provide guidance to protect your data.</p>
+  </article>
+
+  <article>
+    <h3>20. Client Support Commitment</h3>
+    <p>We commit to responding to your inquiries within a reasonable timeframe and providing thorough, respectful support for all your questions and concerns.</p>
+  </article>
+
+  <article>
+    <h3>21. Updating Contact Records</h3>
+    <p>We regularly update our client contact records to ensure communications are accurate and effective.</p>
+  </article>
+
+  <article>
+    <h3>22. Consent Withdrawal</h3>
+    <p>You may withdraw any consent provided for contact or data use at any time by contacting our support team.</p>
+  </article>
+
+  <article>
+    <h3>23. Confidentiality Protection</h3>
+    <p>All contact data is handled within strict confidentiality protocols to safeguard your privacy against unauthorized disclosures.</p>
+  </article>
+
+  <article>
+    <h3>24. Use of Data Analytics</h3>
+    <p>Aggregate contact data may be analyzed for improving our communication strategies and customer service but does not personally identify you.</p>
+  </article>
+
+  <article>
+    <h3>25. Updates on Service Changes</h3>
+    <p>We use your contact information to inform you about significant changes to services, policies, or terms that may affect you.</p>
+  </article>
+
+  <article>
+    <h3>26. Data Protection Training</h3>
+    <p>Our staff undergo ongoing data protection training to ensure compliance and diligence in handling your contact data.</p>
+  </article>
+
+  <article>
+    <h3>27. Use of Encrypted Communication</h3>
+    <p>We employ encrypted email and secure communication methods to protect sensitive information exchanged with you.</p>
+  </article>
+
+  <article>
+    <h3>28. Contact Data Accuracy Responsibility</h3>
+    <p>It is your responsibility to keep us informed of changes to your contact info to ensure uninterrupted service and communication.</p>
+  </article>
+
+  <article>
+    <h3>29. Handling Opt-Outs and Unsubscribes</h3>
+    <p>We promptly process opt-out requests for marketing and non-essential communications and honor your preferences.</p>
+  </article>
+
+  <article>
+    <h3>30. Dispute Resolution Communication</h3>
+    <p>In case of disputes, we provide channels for transparent communication and seek resolution in good faith.</p>
+  </article>
+
+  <article>
+    <h3>31. Contact During Emergency or Exceptional Circumstances</h3>
+    <p>We may contact clients during emergencies or exceptional conditions to provide relevant information and support.</p>
+  </article>
+
+  <article>
+    <h3>32. Customer Satisfaction Surveys</h3>
+    <p>From time to time, we invite you to participate in surveys to help improve our services and client experiences.</p>
+  </article>
+
+  <article>
+    <h3>33. Contact Data Processing and Provider Agreements</h3>
+    <p>Third-party service providers who process contact data on our behalf are contractually required to comply with data protection obligations.</p>
+  </article>
+
+  <article>
+    <h3>34. Notifications of Website Maintenance or Interruptions</h3>
+    <p>We use contact information to notify clients of scheduled service maintenance or unexpected interruptions.</p>
+  </article>
+
+  <article>
+    <h3>35. Data Transfer Notifications</h3>
+    <p>Clients will be notified if their contact data will be transferred or stored in a country with differing data protection laws.</p>
+  </article>
+
+  <article>
+    <h3>36. Security Incident Response</h3>
+    <p>We have procedures in place to respond promptly to any potential data security incidents involving contact information.</p>
+  </article>
+
+  <article>
+    <h3>37. Data Controllers and Contacts</h3>
+    <p>We designate responsible data controllers and contact points available to assist clients with data inquiries and concerns.</p>
+  </article>
+
+  <article>
+    <h3>38. Data Protection Impact Assessments</h3>
+    <p>We conduct impact assessments for new projects to minimize risks related to contact data processing.</p>
+  </article>
+
+  <article>
+    <h3>39. Client Rights Awareness</h3>
+    <p>We inform our clients about their rights regarding contact data through transparent policy statements and support.</p>
+  </article>
+
+  <article>
+    <h3>40. Continuous Improvement</h3>
+    <p>EcoPlanta Consulting continually reviews and enhances our data protection and client communication practices to ensure compliance and client satisfaction.</p>
+  </article>
+</section>
+
+</main>
+
+<section class="customer-satisfaction" aria-live="polite" aria-atomic="true" tabindex="0" style="max-width:1200px; margin: 3rem auto;">
+  Increase your satisfaction and trust by partnering with EcoPlanta Consulting – committed to your privacy, quality, and sustainability.
+</section>
+
+<footer aria-label="Site footer">
+  <div class="footer-section" style="max-width:1200px; margin: 0 auto; padding: 2rem 3rem; color: #c6e2c6; background:#2e5b2e; text-align: center; border-radius:12px;">
+    <p>Contact Us: 240 Mercer St, New York, NY 10012, USA | Phone: +1 (833) 211-9000</p>
+    <p>&copy; 2024 EcoPlanta Consulting. All rights reserved.</p>
+  </div>
+</footer>
+
+<div id="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookie consent" aria-modal="true" hidden>
+  <div id="cookie-message">We use cookies to personalize content and ads, analyze traffic, and improve your experience on our site. By clicking "Accept", you consent to our use of cookies. You can decline by clicking "Decline".</div>
+  <div id="cookie-buttons">
+    <button id="btn-accept" aria-label="Accept cookies">Accept</button>
+    <button id="btn-decline" aria-label="Decline cookies">Decline</button>
+  </div>
+</div>
+
+<script>
+  // Cookie consent logic
+  const cookieConsent = document.getElementById('cookie-consent');
+  const btnAccept = document.getElementById('btn-accept');
+  const btnDecline = document.getElementById('btn-decline');
+
+  function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + days*24*60*60*1000);
+    const expires = "expires="+ d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/;SameSite=Lax";
+  }
+
+  function getCookie(name) {
+    const cname = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i].trim();
+      if (c.indexOf(cname) === 0) {
+        return c.substring(cname.length, c.length);
+      }
+    }
+    return "";
+  }
+
+  function showCookieConsent() {
+    cookieConsent.hidden = false;
+  }
+
+  function hideCookieConsent() {
+    cookieConsent.hidden = true;
+  }
+
+  // Check consent cookie
+  window.addEventListener('load', () => {
+    const consent = getCookie("ecoplanta_cookie_consent");
+    if (consent === "") {
+      showCookieConsent();
+    }
+  });
+
+  btnAccept.addEventListener('click', () => {
+    setCookie("ecoplanta_cookie_consent", "accepted", 365);
+    hideCookieConsent();
+  });
+
+  btnDecline.addEventListener('click', () => {
+    setCookie("ecoplanta_cookie_consent", "declined", 365);
+    hideCookieConsent();
+  });
+</script>
+
+</body>
+</html>
+

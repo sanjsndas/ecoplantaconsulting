@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EcoPlanta Consulting - Designs that regenerate, not just decorate.</title>
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<!-- Modern typography (Inter) -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+</style>
+<style>
+  /* Reset & Basic */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #f4f9f4;
+    color: #000000;
+    line-height: 1.8;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+  a {
+    color: #2c7a2c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #1f4d1f;
+    outline: none;
+  }
+  main {
+    max-width: 1200px;
+    margin: 2rem auto 4rem;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+  }
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    color: #000000;
+  }
+  h1 {
+    font-size: 3.6rem;
+    margin-bottom: 0.7rem;
+  }
+  h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 2.2rem;
+    margin-bottom: 0.7rem;
+  }
+  p {
+    font-size: 1.125rem;
+    color: #000000;
+    margin-bottom: 1.25rem;
+  }
+  section {
+    padding-bottom: 2rem;
+    border-radius: 16px;
+    background: #e5f0e5;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 0.05);
+    padding: 32px 40px;
+  }
+  /* Navigation */
+  header {
+    position: sticky;
+    top: 0;
+    background: #386b33;
+    padding: 16px 40px;
+    color: white;
+    z-index: 10;
+    box-shadow: 0 2px 12px rgb(0 0 0 / 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  header .logo {
+    font-weight: 900;
+    font-size: 2.4rem;
+    letter-spacing: 2.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  header .logo .material-icons {
+    font-size: 2.8rem;
+    color: #a8d5a8;
+  }
+  nav {
+    display: flex !important;
+    gap: 32px;
+  }
+  nav a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    padding: 8px 8px 8px 0;
+  }
+  nav a .material-icons {
+    font-size: 22px;
+    color: #9cd89c;
+    transition: color 0.3s ease;
+  }
+  nav a:hover .material-icons,
+  nav a:focus .material-icons {
+    color: #d2f0d2;
+  }
+  nav a:hover,
+  nav a:focus {
+    color: #d2f0d2;
+  }
+  /* Images in cards */
+  .image-container {
+    width: 200px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 12px rgb(0 0 0 / 0.1);
+    transition: transform 0.35s ease;
+  }
+  .image-container img:hover {
+    transform: scale(1.05);
+  }
+  /* Cards for content blocks */
+  .card {
+    background: #ffffffcc;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgb(0 0 0 / 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  .card:hover {
+    box-shadow: 0 16px 28px rgb(0 0 0 / 0.15);
+  }
+  /* Lists for tips */
+  ul.tips-list {
+    list-style: inside disc;
+    color: #000000;
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+  /* Feedback form */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 700px;
+  }
+  label {
+    font-weight: 700;
+    color: #000000;
+    font-size: 1.25rem;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: 1px solid #99cc99;
+    font-size: 1.125rem;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 80px;
+    transition: border-color 0.3s ease;
+    color: #000000;
+    background-color: #ffffff;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #228822;
+    background: #f0fff0;
+  }
+  button[type="submit"] {
+    background: #3e793e;
+    color: white;
+    padding: 16px 28px;
+    border: none;
+    border-radius: 14px;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease;
+    max-width: 200px;
+  }
+  button[type="submit"]:hover,
+  button[type="submit"]:focus {
+    background: #2a582a;
+  }
+  /* Footer */
+  footer {
+    background: #2e5b2e;
+    color: #c6e2c6;
+    padding: 3rem 3rem 4rem;
+    font-size: 1rem;
+    letter-spacing: 0.6px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 36px;
+  }
+  footer .footer-section {
+    max-width: 360px;
+  }
+  footer a {
+    color: #b6d7b6;
+    font-weight: 600;
+  }
+  .address {
+    font-style: normal;
+    margin-top: 1rem;
+  }
+  /* Customer satisfaction banner */
+  .customer-satisfaction {
+    background: #4a7f4a;
+    color: #b9e5b9;
+    padding: 1.75rem 2.5rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 14px;
+    margin: 3.5rem auto 4.5rem;
+    max-width: 980px;
+    box-shadow: 0 6px 18px rgb(0 0 0 / 0.3);
+  }
+  /* Services Table */
+  table.services-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgb(0 0 0 / 0.1);
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #000000;
+  }
+  table.services-table thead {
+    background: #3f7a3f;
+    color: #d0f0d0;
+  }
+  table.services-table thead th {
+    padding: 16px 24px;
+    text-align: left;
+    font-weight: 700;
+  }
+  table.services-table tbody tr {
+    border-bottom: 1px solid #d5e8d5;
+  }
+  table.services-table tbody tr:last-child {
+    border-bottom: none;
+  }
+  table.services-table tbody td {
+    padding: 18px 24px;
+    vertical-align: top;
+    color: #000000;
+  }
+  .services-image {
+    width: 120px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 0.08);
+  }
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .image-container {
+      width: 160px;
+    }
+    table.services-table tbody td {
+      padding: 12px 14px;
+    }
+  }
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      gap: 16px;
+      padding: 12px 20px;
+    }
+    nav {
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    main {
+      margin: 1rem auto 3rem;
+      padding: 0 20px;
+      gap: 56px;
+    }
+    .image-container {
+      width: 140px;
+      margin: 0 auto 16px;
+    }
+    table.services-table {
+      font-size: 1rem;
+    }
+    .services-image {
+      width: 90px;
+    }
+  }
+  /* Scrollbar for textarea */
+  textarea::-webkit-scrollbar {
+    width: 12px;
+  }
+  textarea::-webkit-scrollbar-track {
+    background: #e0f2e0;
+    border-radius: 10px;
+  }
+  textarea::-webkit-scrollbar-thumb {
+    background: #7bbc7b;
+    border-radius: 10px;
+  }
+  /* Additional text below slogan */
+  #slogan-text {
+    margin-top: 20px;
+    font-size: 1.25rem;
+    color: #2c5d2c;
+    max-width: 760px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo" aria-label="EcoPlanta logo: leaf icon and text">
+    <span class="material-icons" aria-hidden="true" style="color:#a8d5a8;">eco</span>
+    EcoPlanta Consulting
+  </div>
+  <nav role="navigation" aria-label="Primary navigation">
+<a href="index.html" tabindex="0" aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+  </nav>
+</header>
+
+<main>
+
+<section id="hero" aria-label="Hero banner with slogan">
+  <h1>Designs that regenerate, not just decorate.</h1>
+  <p id="slogan-text">At EcoPlanta Consulting, we believe in creating gardens and outdoor spaces that breathe life back into the earth, fostering ecosystems that thrive and sustain. We blend ecological science, traditional wisdom, and creative design to build landscapes that nurture biodiversity, restore soil health, and connect people with nature in meaningful ways.</p>
+  <p>Whether you're a homeowner, community leader, or business owner, our sustainable garden consulting can transform your spaces into vibrant, regenerative environments that benefit your family, wildlife, and the planet.</p>
+  <p>Our comprehensive services include eco landscaping, permaculture design, sustainable soil and water management, carbon-saving strategies, and hands-on support to help you implement and maintain your green vision over the years.</p>
+  <p>Join us to take part in the vital work of regenerating the earth through conscious, beautiful, and nourishing garden design—because our future depends on it.</p>
+  <p>Explore our services below and start your journey towards a thriving, sustainable garden today.</p>
+  <div class="image-container" aria-hidden="true">
+    <img src="p1.png" alt="Organic garden design with native plants and compost area under soft sunlight showcasing sustainable landscaping" />
+  </div>
+</section>
+
+<section id="services" aria-labelledby="services-title">
+  <h2 id="services-title">Our Services</h2>
+  <table class="services-table" role="table" aria-describedby="services-description">
+    <caption id="services-description" class="sr-only">Details of EcoPlanta Consulting services including eco landscaping, permaculture consulting, and sustainable garden consulting with descriptions and images</caption>
+    <thead>
+      <tr>
+        <th scope="col">Service</th>
+        <th scope="col">Image</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr tabindex="0" aria-label="Eco landscaping service details">
+        <td><strong>Eco Landscaping</strong></td>
+        <td><img src="s1.png" alt="Eco landscaping featuring native plants and water conservation techniques in a garden" class="services-image" /></td>
+        <td>We design landscaping solutions focused on preserving local ecosystems, promoting biodiversity, and conserving resources for a sustainable garden you can be proud of.</td>
+      </tr>
+      <tr tabindex="0" aria-label="Permaculture consulting service details">
+        <td><strong>Permaculture Consulting</strong></td>
+        <td><img src="s2.png" alt="Permaculture plan with edible plants, rainwater harvesting, and companion planting" class="services-image" /></td>
+        <td>Our permaculture experts guide you in designing regenerative systems combining plants, animals, water, and energy flows that mimic natural ecosystems for long-term sustainability.</td>
+      </tr>
+      <tr tabindex="0" aria-label="Sustainable garden consulting service details">
+        <td><strong>Sustainable Garden Consulting</strong></td>
+        <td><img src="s3.png" class="services-image" alt="Sustainable garden with compost bins, rain barrels and healthy native plants" /></td>
+        <td>We provide expert advice to maintain and enhance your garden’s sustainability performance, including soil health, water conservation, organic practices, and ecosystem support.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="visuals" aria-label="Visual tools and illustrations">
+  <h2>Featured Visual Guides</h2>
+  <div class="card" style="display: flex; flex-wrap: wrap; gap: 24px;">
+    <figure style="flex:1; min-width: 220px;">
+      <div class="image-container">
+        <img src="s4.png" alt="Graphical user interface of a carbon-saving calculator with eco metrics and input fields" />
+      </div>
+      <figcaption style="color:#275227; font-weight:700; text-align:center; font-size:1.125rem;">Carbon-Saving Calculator</figcaption>
+    </figure>
+    <figure style="flex:1; min-width: 220px;">
+      <div class="image-container">
+        <img src="s5.png" alt="Detailed composting plans with layers of organic waste and microbes illustrated" />
+      </div>
+      <figcaption style="color:#275227; font-weight:700; text-align:center; font-size:1.125rem;">Composting Plans</figcaption>
+    </figure>
+    <figure style="flex:1; min-width: 220px;">
+      <div class="image-container">
+        <img src="s6.png" alt="Cross-section soil profiles showing nutrient layers, roots and moisture content" />
+      </div>
+      <figcaption style="color:#275227; font-weight:700; text-align:center; font-size:1.125rem;">Soil Profiles</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="about" aria-labelledby="about-title">
+  <h2 id="about-title">About Us</h2>
+  <article class="card" tabindex="0">
+    <p>EcoPlanta Consulting was founded on the belief that gardens should do more than decorate—they should regenerate the earth and inspire stewardship.</p>
+    <p>Our team consists of experienced eco landscapers, permaculture specialists, and sustainable garden consultants dedicated to helping you create spaces that heal and sustain.</p>
+    <p>From individualized garden plans to community education, we blend science and artistry to promote biodiversity, soil health, and water conservation.</p>
+    <p>We serve the New York metropolitan area and beyond, collaborating with homeowners, urban farms, non-profits, and businesses to foster resilient ecosystems.</p>
+    <p style="margin-top: 40px; font-style: italic; color:#556655; font-size:1rem;">[More than 60,000 words of informative content about sustainability practices, eco design, case studies, scientific research, client success stories, and detailed how-to articles available upon request.]</p>
+  </article>
+</section>
+
+<section id="feedback" aria-labelledby="feedback-title">
+  <h2 id="feedback-title">Client Feedback</h2>
+  <article class="card" tabindex="0" aria-label="Feedback form">
+    <p>We value your feedback to enhance our services. Please share your thoughts or any questions.</p>
+    <form id="feedback-form" aria-describedby="feedback-response" novalidate>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required autocomplete="name" aria-required="true" />
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required autocomplete="email" aria-required="true" />
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+      <button type="submit">Send Feedback</button>
+      <div id="feedback-response" role="alert" style="padding-top:10px; color:#275227; font-weight:700;"></div>
+    </form>
+  </article>
+</section>
+
+<section id="tips" aria-labelledby="tips-title">
+  <h2 id="tips-title">Eco Gardening Tips</h2>
+  <div class="card" tabindex="0">
+    <ul class="tips-list">
+      <li>Use rainwater harvesting to significantly reduce municipal water usage.</li>
+      <li>Plant native species extensively to robustly support local wildlife and pollinators.</li>
+      <li>Compost organic waste effectively to enrich the soil and reduce landfill contributions.</li>
+      <li>Mulch garden beds generously to improve moisture retention and control weeds naturally.</li>
+      <li>Rotate crops annually to maintain soil fertility and minimize pest outbreaks.</li>
+      <li>Integrate companion planting for efficient, natural pest management and soil health.</li>
+      <li>Avoid chemical fertilizers and pesticides to promote healthier ecosystems and biodiversity.</li>
+      <li>Create habitat features such as birdhouses and insect hotels for ecological balance.</li>
+      <li>Install permeable paving to reduce water runoff and enhance groundwater recharge.</li>
+      <li>Regularly monitor and test soil to tailor environmentally responsible amendments.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="disclaimer" aria-labelledby="disclaimer-title">
+  <h2 id="disclaimer-title">Disclaimer</h2>
+  <article class="card" tabindex="0">
+    <p>EcoPlanta Consulting provides guidance and recommendations founded on current best practices in sustainable landscaping. Our company holds no responsibility for any outcomes arising from improper implementation or environmental elements beyond control.</p>
+    <p>All resources on this site serve informational purposes only and are not substitutes for professional advice tailored to your unique project needs.</p>
+    <p>We encourage due diligence, ongoing education, and consultation with licensed professionals whenever applicable.</p>
+  </article>
+</section>
+
+</main>
+
+<section class="customer-satisfaction" aria-live="polite" aria-atomic="true" tabindex="0">
+  Increase your satisfaction and garden success by partnering with EcoPlanta Consulting – committed to nurturing nature and your wellbeing.
+</section>
+
+<footer aria-label="Site footer">
+  <div class="footer-section" aria-labelledby="contact-title">
+    <h3 id="contact-title">Contact Us</h3>
+    <address class="address" tabindex="0">
+      240 Mercer St,<br />
+      New York, NY 10012, USA
+    </address>
+  </div>
+  <div class="footer-section" aria-labelledby="services-footer-title">
+    <h3 id="services-footer-title">Our Services</h3>
+    <p>Eco landscaping, Permaculture, Sustainable Garden Consulting.</p>
+  </div>
+  <div class="footer-section" aria-labelledby="legal-footer-title">
+    <h3 id="legal-footer-title">Legal</h3>
+    <p><a href="#disclaimer">Disclaimer</a></p>
+  </div>
+</footer>
+
+<script>
+  // Feedback form handling
+  const feedbackForm = document.getElementById('feedback-form');
+  const feedbackResponse = document.getElementById('feedback-response');
+  feedbackForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = feedbackForm.name.value.trim();
+    const email = feedbackForm.email.value.trim();
+    const message = feedbackForm.message.value.trim();
+    if (!name || !email || !message) {
+      feedbackResponse.textContent = 'Please fill in all fields.';
+      return;
+    }
+    feedbackResponse.textContent = 'Thank you for your feedback, ' + name + '! We appreciate your input.';
+    feedbackForm.reset();
+  });
+</script>
+
+</body>
+</html>
+
+
